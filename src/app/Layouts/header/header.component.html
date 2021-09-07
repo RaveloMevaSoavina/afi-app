@@ -1,0 +1,45 @@
+<div class="header">
+    <div class="header-leftside">
+        <img alt="Igd_logo" src="./assets/images/logo_igd.png"/>
+        <p>Environnement : Recette (BETA)</p>
+        <p>Aujourd'hui {{ todayDate | date:'fullDate' }}</p>
+    </div>
+    <div class="header-center">
+        <div class="header-center-box" (mouseover)="changeText=true" (mouseout)="changeText=false">
+            <span *ngIf="!changeText">Memos :</span>
+            <span *ngIf="changeText"> Ajout + </span>
+        </div>
+        <div class="header-center-box"> 
+            <span>0 reçus</span>
+        </div>
+        <div class="header-center-box">
+            <span>96 total</span>
+        </div>
+        <div class="header-center-box">
+            <input placeholder="Rechercher"/>
+            <button>
+                <fa-icon [icon]="faUsers"></fa-icon>
+            </button>
+        </div>
+
+    </div>
+    <div class="header-rightside">
+        <div class="header-rightside-status">
+            <span> SMS : 0</span>
+            <span>test TEST</span>
+            <button>
+                <fa-icon [icon]="faPowerOff"></fa-icon>
+            </button>
+        </div>
+        <div class="header-rightside-navigation">
+            <p-dropdown 
+                [options]="navigations" 
+                [(ngModel)]="selectedNavigation" 
+                placeholder="Navigation rapide" 
+                optionLabel="label"
+                optionValue="value"
+	            [showClear]="true">
+            </p-dropdown>
+        </div>
+    </div>
+</div>

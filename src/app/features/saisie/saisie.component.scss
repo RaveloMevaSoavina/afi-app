@@ -1,0 +1,58 @@
+:host ::ng-deep{
+    .sante{
+        margin : 20px;
+        .navtabs{
+            display : flex;
+            flex-direction : row;
+    
+            .navtabs-menu {
+                margin : 10px 20px
+            }
+        }
+        .p-panel-content{
+           border-color : #00a4de;
+           font-size : 0.6875rem;
+        }
+        .p-panel-header{
+            background-color: #00a4de;
+            border : none;
+            color : #FFF;
+            font-size : 0.6875rem;
+        }
+
+        .sante-forms{
+            display : flex;
+            flex-direction : column;
+            .form-line{
+                margin-top: 5px;
+
+                label{
+                    display : inline-block;;
+                    text-align: right;
+                    width : 140px;
+                    margin-right: 20px;
+                }
+    
+                input{
+                    display : inline-block;
+                    width : 384px;
+                }
+
+                p-dropdown{
+                    width : 384px;
+                }
+    
+            }
+
+            .forms-client-famille, .forms-prospect-actuelle{
+                display : flex;
+                flex-direction : row;
+                justify-content: space-around;
+                width : 100%;
+                margin : 20px 0;
+            }
+
+        }
+    }
+    
+}

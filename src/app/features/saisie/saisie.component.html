@@ -1,0 +1,100 @@
+<div class="sante">
+    <div class="navtabs">
+        <a class="navtabs-menu navtabs-sante">Santé</a>
+        <a class="navtabs-menu  navtabs-prevoyance">Prévoyance</a>
+    </div>
+
+    <div class="sante-forms">
+        <div class="forms-client-famille">
+            <p-panel header="INFORMATIONS CLIENT" >
+                <div class="form-line">
+                    <label class="require">Origine </label>
+                    <input type="text" pInputText class="p-inputtext-sm"/>
+                </div>
+                <div class="form-line">
+                    <label >Conseiller </label>
+                    <input type="text" pInputText class="p-inputtext-sm"/>
+                </div>
+                <div class="form-line">
+                    <label class="require">Civilité </label>
+                    <p-dropdown 
+                [options]="civilities" 
+                [(ngModel)]="civility" 
+                placeholder="---" 
+                optionLabel="label"
+                optionValue="value">
+            </p-dropdown>
+                </div>
+                <div class="form-line">
+                    <label class="require">Nom </label>
+                    <input type="text" pInputText class="p-inputtext-sm"/>
+                </div>
+                <div class="form-line">
+                    <label class="require" >Prénoms </label>
+                    <input type="text" pInputText class="p-inputtext-sm"/>
+                </div>
+                <div class="form-line">
+                    <label class="require" >Adresse </label>
+                    <input type="text" pInputText class="p-inputtext-sm"/>
+                </div>
+                <div class="form-line">
+                    <label class="require">Code postal </label>
+                    <input type="number" pInputText class="p-inputtext-sm"/>
+                </div>
+                <div class="form-line">
+                    <label> Ville </label>
+                    <input type="text" pInputText class="p-inputtext-sm"/>
+                </div>
+                <div class="form-line">
+                    <label >Tel portable </label>
+                    <input type="text" pInputText class="p-inputtext-sm"/>
+                </div>
+                <div class="form-line">
+                    <label >Tel domicile </label>
+                    <input type="text" pInputText class="p-inputtext-sm"/>
+                </div>
+                <div class="form-line">
+                    <label >Tel travail </label>
+                    <input type="text" pInputText class="p-inputtext-sm"/>
+                </div>
+                <div class="form-line">
+                    <label >Horaire de rappel </label>
+                    <input type="text" pInputText class="p-inputtext-sm"/>
+                </div>
+                <div class="form-line">
+                    <label class="require">Email </label>
+                    <input type="text" pInputText class="p-inputtext-sm"/>
+                </div>
+                
+            </p-panel>
+        
+            <p-panel header="COMPOSITION FAMILLE">
+                Content
+            </p-panel>
+        </div>
+        <p-panel header="FORMALISATION DU DEVOIR DE CONSEIL">
+            Content
+        </p-panel>
+        <div class="forms-prospect-actuelle">
+            <p-panel header="POTENTIEL PROSPECT">
+                Content
+            </p-panel>
+
+            <p-panel header="SITUATION ACTUELLE">
+                Content
+            </p-panel>
+        </div>
+    </div>
+
+    <button pButton type="button" label="QUALIFICATION" ></button>
+    <button pButton type="button" label="CREER LA FICHE" ></button>
+
+    
+
+   
+   
+
+    
+    
+
+</div>

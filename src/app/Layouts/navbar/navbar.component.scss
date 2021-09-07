@@ -1,0 +1,32 @@
+:host ::ng-deep{
+    .navbar{
+        background-color: #00a4de;
+        display : flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        list-style-type: none;
+        #infocompany{
+            width : 200px;
+            margin-left : 20px;
+            border : none;
+            outline : none;
+        }
+
+        .navbar-menu{
+            background-color: #00a4de;
+            padding : 12px 30px;
+            .navbar-menu-link{
+                color : #FFF;
+                text-decoration: none;
+                font-weight: 400;
+                font-size: 0.75rem;
+            }
+            &:hover{
+                background-color: #0385b4;
+            }
+        }
+        .navbar-menu--bordered{
+            border-right: 1.5px solid #FFF ;
+        }
+    }
+}

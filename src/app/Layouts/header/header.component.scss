@@ -1,0 +1,82 @@
+:host ::ng-deep{
+    .header{
+        display : flex;
+        flex-direction : row;
+        justify-content: space-between;
+        flex-wrap: no-wrap;
+        align-items: flex-start;
+        color : #333;
+
+        .header-leftside{
+            padding: 10px;
+            img{
+                width : 115px;
+                height: 48px;
+                margin-bottom: 10px;
+            }
+            p{
+                font-size : 0.75rem;
+                margin : 20px 10px ;
+            }
+        }
+
+        .header-center{
+            display : flex;
+            flex-direction : row;
+            align-items: center;
+            background-color: #CCDC46 ;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            cursor : pointer;
+            height : 50px;
+            .header-center-box{
+                padding : 20px;
+                border : 1px solid #FFF;
+                min-width: 100px;
+                text-align: center;
+                vertical-align: center;
+                span{
+                    font-size: 0.8125rem;
+                }
+                input{
+                    border : none;
+                    padding : 5px 10px;
+                    outline: none;
+                }
+                button{
+                    border : none;
+                    width : 30px;
+                    height: 25px ;
+                    margin-left: 10px;
+                    cursor: pointer;
+                    border : 1px solid #BBB;
+                    border-radius: 5px;
+                }
+            }
+        }
+
+        .header-rightside{
+            margin :10px;
+            padding : 20px 10px;
+            .header-rightside-status{
+                span{
+                    margin : 0 20px;
+                    font-weight: 800;
+                    font-size: 1rem;
+                }
+                button{
+                    background-color: #d9534f;
+                    border :none;
+                    color : #FFF;
+                    padding : 10px 10px;
+                    border-radius : 5px;
+                    cursor: pointer;
+                }
+            }
+            .header-rightside-navigation{
+                margin-top: 20px;
+                text-align: center;
+            }
+        }
+    }
+}
