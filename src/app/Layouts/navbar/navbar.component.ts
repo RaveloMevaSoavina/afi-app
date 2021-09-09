@@ -11,6 +11,10 @@ export class NavbarComponent implements OnInit {
   companies: { code: string; name: string; }[];
   item!: string;
 
+  items : any[];
+
+  selectCompany !: {code : string , name : string};
+
   constructor() {
     this.companies = [     
       {code:"0",name: ""},
@@ -470,6 +474,430 @@ export class NavbarComponent implements OnInit {
       {code:"207",name: "VIVINTER"}
 
   ]
+
+  this.items = [
+    { label: 'Accueil', icon: ''},
+    { label: 'Saisie', icon: '' , routerLink : '/saisie'},
+    {
+        label: 'Gestion des leads', icon: '',
+        items:[
+            {
+                label:'Moteur d\'attribution',
+                icon: 'fa fa-external-link-alt',
+                routerLink: ['/theming'],
+            },
+            {
+                label:'Suivi des attributions',
+                routerLink: ['/icons'],
+            },
+            {
+                label:'Souscriptions en ligne',
+                routerLink: ['/icons'],
+            },
+            {
+                label: 'Nouvelles demandes(tests)',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: 'Nouvelles demandes Télévente',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: 'Nouvelles demandes Télé-commercial',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: 'Nouvelles demandes Télé-commercial HA',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: 'Nouvelles demandes Relation Client',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: 'Nouvelles demandes AFI Comptabilité',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: 'Nouvelles demandes Gest. Suivi Clients',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: 'Nouvelles demandes Mandataires',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: 'Nouvelles demandes Doublons',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: 'Nouvelles demandes Télépro',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: 'Nouvelles demandes Gestion contrats',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: 'Nouvelles demandes Souscription',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: 'Nouvelles demandes Digital',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: 'Nouvelles demandes Lead froids',
+                // routerLink: ['/icons'],
+            }
+        ]
+    },
+    {
+        label: 'Prospection', icon: '',
+        items: [
+            {
+                label: 'Globals (28)',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: 'Relances (1)',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: '0 Appel (28)',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: '1 Appel (0)',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: '2 Appels (0)',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: '3 Appels (0)',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: '4 Appels (0)',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: '5 Appels (0)',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: '6 Appels (0)',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: '7 Appels (0)',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: '8 Appels (0)',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: '9 Appels (0)',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: '10 Appels (0)',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: '+10 Appels (0)',
+                // routerLink: ['/icons'],
+            }
+        ],
+    },
+    {
+        label: 'Clients contactés', icon: '',
+        items: [
+                {
+                    label: 'Globals (4)',
+                    // routerLink: ['/icons'],
+                },
+                {
+                    label: 'Sans rdv (0)',
+                    // routerLink: ['/icons'],
+                },
+                {
+                    label: 'Rdv du jour (0)',
+                    // routerLink: ['/icons'],
+                },
+                {
+                    label: 'Rdv en retard (4)',
+                    // routerLink: ['/icons'],
+                },
+                {
+                    label: 'Rdv futurs (0)',
+                    // routerLink: ['/icons'],
+                },
+                {
+                    label: 'Relances (0)',
+                    // routerLink: ['/icons'],
+                },
+                {
+                    label: 'Relances futurs',
+                    // routerLink: ['/icons'],
+                }
+        ],
+    },
+    { label: 'Tarification modulr', icon: '' },
+    {
+        label: 'Production indiv', icon: '',
+        items: [
+            {
+                label: 'Globals',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: 'Argumentation',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: 'En Attentes',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: 'Signés',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: 'Appel Bienvenue',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: 'Book journalier',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: 'Suivi PostCode',
+                // routerLink: ['/icons'],
+            }
+        ],
+    },
+    {
+        label: 'Production pôle', icon: '',
+        items: [
+            {
+                label: 'Signé Pôle',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: 'En attente Pôle',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: 'Objectifs',
+                // routerLink: ['/icons'],
+            }
+        ],
+    },
+    {
+        label: 'Tableau de bord', icon: '',
+        items: [
+            {
+                label: 'Base des demandes',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: 'Production Pôles',
+                // routerLink: ['/icons'],
+                items:[
+                    {
+                        label: 'Télévente',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'Télé-commercial',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'Télé-commercial HA',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'Digital',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'Relation Clients',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'Mandataires',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'Mada Leads Froids',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'Tarificateur Test',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'zz DOUBLONS & F.D.',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'Souscription',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'AFI Comptabilité',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'AFI télépro',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'Gestion Contrats',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'Gestionnaire Suivi Clients',
+                        // routerLink: ['/icons'],
+                    },
+                ]
+            },
+            {
+                label: 'Suivi Pôles',
+                // routerLink: ['/icons'],
+                items:[
+                    {
+                        label: 'Fiches en cours',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'Archives',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'Suivi origines',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'Suivi Appels',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'Liste des Non Aboutis',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'Suivi PostCode',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'Suivi PostCode Appel',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'Book journalier',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'Stat Compagnies',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'Suivi des archivages',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'Statistiques archivage',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'Stat Souscription en ligne',
+                        // routerLink: ['/icons'],
+                    }
+                ]
+            },
+            {
+                label: 'Suivi Global',
+                // routerLink: ['/icons'],
+                items: [
+                    {
+                        label: 'En attente global',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'Signé global',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'LRE Programmée',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'Résiliations',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'Appels de Bienvenue',
+                        // routerLink: ['/icons'],
+                    }
+                ]
+            },
+            {
+                label: 'Marketing',
+                // routerLink: ['/icons'],
+                items: [
+                    {
+                        label: 'Origine Santé',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'Emailing Santé',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'Ventes Web',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'Origine Partenaires',
+                        // routerLink: ['/icons'],
+                    }
+                ]
+            },
+            {
+                label: 'Appel Bienvenue - Administration',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: 'Rémunération Winpass',
+                // routerLink: ['/icons'],
+            },
+            {
+                label: 'Administration',
+                // routerLink: ['/icons'],
+                items: [
+                    {
+                        label: 'List des conseillers',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'Liste des origines',
+                        // routerLink: ['/icons'],
+                    },
+                    {
+                        label: 'Gestion de la blacklist',
+                        // routerLink: ['/icons'],
+                    }
+                ]
+            }
+        ],
+    },
+    { label: 'Documentation', icon: ''},
+]
   }
 
   ngOnInit(): void {

@@ -1,17 +1,9 @@
 :host ::ng-deep{
     .sante{
         margin : 20px;
-        .navtabs{
-            display : flex;
-            flex-direction : row;
-    
-            .navtabs-menu {
-                margin : 10px 20px
-            }
-        }
         .p-panel-content{
            border-color : #00a4de;
-           font-size : 0.6875rem;
+           font-size : 1rem;
         }
         .p-panel-header{
             background-color: #00a4de;
@@ -36,6 +28,7 @@
                 input{
                     display : inline-block;
                     width : 384px;
+                    font-size : 0.6875rem;
                 }
 
                 p-dropdown{
@@ -49,10 +42,148 @@
                 flex-direction : row;
                 justify-content: space-around;
                 width : 100%;
-                margin : 20px 0;
+                margin : 20px auto;
+
+                .ajustWidth .p-dropdown{
+                    width : 384px;
+                }
+                .child {
+                    width : 100px;
+                    .p-dropdown{
+                        width: 100px;
+                        height : 36px;
+                    }
+                }
+            }
+            .centerilize{
+                width : 92vw;
+                margin : 0px auto;
+
+                .bolder{
+                    font-weight: 800;
+                    margin-bottom : 20px;
+                }
+
+                .conseil{
+                    display : flex;
+                    flex-direction : row;
+                    width : 100%;
+                    margin : 20px 0;
+
+                    .conseil-grid{
+                        display: flex;
+                        flex-direction :row;
+                        justify-content: space-between;
+                        margin : 20px 0;
+
+                        .conseil-col{
+                            display: flex;
+                            flex-direction :column;
+                            margin : 0 10px;
+
+                            .potentiel-label{
+                                margin-right : 20px;
+                                display : inline-block;
+                                text-align: right;
+                            }
+
+                            .box{
+                                margin : 5px 0;
+                            }
+                            .labelline{
+                                margin-bottom : 22px;
+                            }
+                            .p-dropdown{
+                                margin-bottom: 10px;
+                                height : 35px;
+                                width : 213px;
+                                font-size : 10px;
+                            }
+
+                            textarea{
+                                height : 160px;
+                                width : 650px;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .prospect, .actuelle{
+                display : flex;
+                flex-direction : column;
+                
+
+                .prospect-line{
+                    display : flex;
+                    flex-direction : row;
+                    align-items: center;
+                    width : 100%;
+                    margin : 20px 30px;
+                    .potentiel-label{
+                        display : inline-block;;
+                    text-align: right;
+                    width : 140px;
+                    margin-right: 20px;
+                    }
+                    div{
+                        margin : 0 30px;
+                        label {
+                            margin : 0 10px 0 5px;
+                        }
+                    }
+                }
             }
 
         }
-    }
-    
+        .btngroup{
+            width : 100%;
+            margin : 0 auto;
+        }
+
+        .divide2{
+            display : flex;
+            flex-direction :row;
+            align-items:center;
+            justify-content: space-between;
+            margin : 5px 0;
+
+            .divide2-row{
+                margin-left : 50px;
+            }
+
+            label{
+                display : inline-block;;
+                text-align: right;
+                width : 90px;
+                margin-right: 20px;
+            }
+
+            .p-inputtext{
+                width : 100px;
+                
+            }
+
+            .divide2-column{
+                display : flex;
+                flex-direction :column;
+                margin : 20px 0;
+                .form-line{
+                    display : flex;
+                    flex-direction : row;
+                    align-items: center;
+                    width : 260px;
+                    .p-inputtext{
+                        width : 100px;
+                    }
+                }
+
+            }
+        }
+        #attention{
+            margin : 20px;
+            font-style: italic;
+        }
+    } 
 }

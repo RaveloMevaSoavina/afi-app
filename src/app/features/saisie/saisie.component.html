@@ -1,29 +1,44 @@
 <div class="sante">
     <div class="navtabs">
-        <a class="navtabs-menu navtabs-sante">Santé</a>
-        <a class="navtabs-menu  navtabs-prevoyance">Prévoyance</a>
+        <p-tabMenu [model]="items" [activeItem]="activeItem"></p-tabMenu>
     </div>
 
     <div class="sante-forms">
         <div class="forms-client-famille">
+            <!-- INFORMATION CLIENT PANEL -->
             <p-panel header="INFORMATIONS CLIENT" >
                 <div class="form-line">
                     <label class="require">Origine </label>
-                    <input type="text" pInputText class="p-inputtext-sm"/>
+                    <p-dropdown 
+                        [options]="civilities" 
+                        [(ngModel)]="civility" 
+                        placeholder="Origine" 
+                        optionLabel="label"
+                        optionValue="value"
+                        class="ajustWidth">
+                    </p-dropdown>
                 </div>
                 <div class="form-line">
                     <label >Conseiller </label>
-                    <input type="text" pInputText class="p-inputtext-sm"/>
+                    <p-dropdown 
+                        [options]="civilities" 
+                        [(ngModel)]="civility" 
+                        placeholder="Conseiller" 
+                        optionLabel="label"
+                        optionValue="value"
+                        class="ajustWidth">
+                    </p-dropdown>
                 </div>
                 <div class="form-line">
                     <label class="require">Civilité </label>
                     <p-dropdown 
-                [options]="civilities" 
-                [(ngModel)]="civility" 
-                placeholder="---" 
-                optionLabel="label"
-                optionValue="value">
-            </p-dropdown>
+                        [options]="civilities" 
+                        [(ngModel)]="civility" 
+                        placeholder="Civilité." 
+                        optionLabel="label"
+                        optionValue="value"
+                        class="ajustWidth">
+                    </p-dropdown>
                 </div>
                 <div class="form-line">
                     <label class="require">Nom </label>
@@ -67,34 +82,423 @@
                 </div>
                 
             </p-panel>
-        
+        <!-- COMPOSITION FAMILLE PANNEL -->
             <p-panel header="COMPOSITION FAMILLE">
-                Content
+                <div class="form-line">
+                    <label >Type de couple </label>
+                    <p-dropdown 
+                        [options]="civilities" 
+                        [(ngModel)]="civility" 
+                        placeholder="Type de couple" 
+                        optionLabel="label"
+                        optionValue="value"
+                        class="ajustWidth">
+                    </p-dropdown>
+                </div>
+                <div class="divide2">
+                    <div class="divide2-row">
+                        <label class="require">Né le </label>
+                        <input type="text" pInputText class="p-inputtext-sm"/>
+    
+                        <label >age rapide </label>
+                        <input type="text"  pInputText class="p-inputtext-sm"/>
+                    </div>
+                    
+                </div>
+                <div class="form-line">
+                    <label class="require">Régime (M.) </label>
+                    <p-dropdown 
+                        [options]="civilities" 
+                        [(ngModel)]="civility" 
+                        placeholder="Non spécifié" 
+                        optionLabel="label"
+                        optionValue="value"
+                        class="ajustWidth">
+                    </p-dropdown>
+                </div>
+                <div class="form-line">
+                    <label class="require">CSP </label>
+                    <p-dropdown 
+                        [options]="civilities" 
+                        [(ngModel)]="civility" 
+                        placeholder="Non spécifié" 
+                        optionLabel="label"
+                        optionValue="value"
+                        class="ajustWidth">
+                    </p-dropdown>
+                </div>
+                <div class="form-line">
+                    <label >Profession </label>
+                    <input type="text" pInputText class="p-inputtext-sm"/>
+                </div>
+                <div class="divide2">
+                    <div class="divide2-row">
+                        <label class="require">Né le </label>
+                        <input type="text" pInputText class="p-inputtext-sm"/>
+
+                        <label >age rapide </label>
+                        <input type="text"  pInputText class="p-inputtext-sm"/>
+                    </div>
+                </div>
+                <div class="form-line">
+                    <label class="require">Régime (Mme) </label>
+                    <p-dropdown 
+                    [options]="civilities" 
+                    [(ngModel)]="civility" 
+                    placeholder="Non spécifié" 
+                    optionLabel="label"
+                    optionValue="value"
+                    class="ajustWidth">
+                </p-dropdown>
+                </div>
+                <div class="form-line">
+                    <label class="require">CSP </label>
+                    <p-dropdown 
+                    [options]="civilities" 
+                    [(ngModel)]="civility" 
+                    placeholder="Non spécifié" 
+                    optionLabel="label"
+                    optionValue="value"
+                    class="ajustWidth">
+                </p-dropdown>
+                </div>
+                <div class="form-line">
+                    <label >Profession </label>
+                    <input type="text" pInputText class="p-inputtext-sm"/>
+                </div>
+                <div class="form-line">
+                    <label class="require">Nombre d'enfants </label>
+                    <input type="text" pInputText class="p-inputtext-sm"/>
+                </div>
+                <div class="form-line">
+                    <label>Date de naissance </label>
+                    <input type="text" pInputText class="p-inputtext-sm"/>
+                </div>
+                <div class="divide2">
+                    <div class="divide2-column">
+                        <div class="form-line ">
+                            <label>1er enfant </label>
+                            <input type="text" pInputText class="p-inputtext-sm"/>
+                        </div>
+                        <div class="form-line">
+                            <label>Régime enfant 1 </label>
+                            <p-dropdown 
+                                    [options]="civilities" 
+                                    [(ngModel)]="civility" 
+                                    placeholder="Non spécifié" 
+                                    optionLabel="label"
+                                    optionValue="value"
+                                    class="child">
+                            </p-dropdown>
+                        </div>
+                        <div class="form-line">
+                            <label>2eme enfant </label>
+                            <input type="text" pInputText class="p-inputtext-sm"/>
+                        </div>
+                        <div class="form-line">
+                            <label>Régime enfant 2 </label>
+                            <p-dropdown 
+                                    [options]="civilities" 
+                                    [(ngModel)]="civility" 
+                                    placeholder="Non spécifié" 
+                                    optionLabel="label"
+                                    optionValue="value"
+                                    class="child">
+                            </p-dropdown>
+                        </div>
+                        <div class="form-line">
+                            <label>3eme enfant </label>
+                            <input type="text" pInputText class="p-inputtext-sm"/>
+                        </div>
+                        <div class="form-line">
+                            <label>Régime enfant 3 </label>
+                            <p-dropdown 
+                                    [options]="civilities" 
+                                    [(ngModel)]="civility" 
+                                    placeholder="Non spécifié" 
+                                    optionLabel="label"
+                                    optionValue="value"
+                                    class="child">
+                            </p-dropdown>
+                        </div>
+                    </div>
+                    <div class="divide2-column">
+                        <div class="form-line">
+                            <label>4eme enfant </label>
+                            <input type="text" pInputText class="p-inputtext-sm"/>
+                        </div>
+                        <div class="form-line">
+                            <label>Régime enfant 4 </label>
+                            <p-dropdown 
+                                    [options]="civilities" 
+                                    [(ngModel)]="civility" 
+                                    placeholder="Non spécifié" 
+                                    optionLabel="label"
+                                    optionValue="value"
+                                    class="child">
+                            </p-dropdown>
+                        </div>
+                        <div class="form-line">
+                            <label>5eme enfant </label>
+                            <input type="text" pInputText class="p-inputtext-sm"/>
+                        </div>
+                        <div class="form-line">
+                            <label>Régime enfant 5</label>
+                            <p-dropdown 
+                                    [options]="civilities" 
+                                    [(ngModel)]="civility" 
+                                    placeholder="Non spécifié" 
+                                    optionLabel="label"
+                                    optionValue="value"
+                                    class="child">
+                            </p-dropdown>
+                        </div>
+                        <div class="form-line">
+                            <label>6eme enfant </label>
+                            <input type="text" pInputText class="p-inputtext-sm"/>
+                        </div>
+                        <div class="form-line">
+                            <label>Régime enfant 6 </label>
+                            <p-dropdown 
+                                    [options]="civilities" 
+                                    [(ngModel)]="civility" 
+                                    placeholder="Non spécifié" 
+                                    optionLabel="label"
+                                    optionValue="value"
+                                    class="child">
+                            </p-dropdown>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                
             </p-panel>
         </div>
-        <p-panel header="FORMALISATION DU DEVOIR DE CONSEIL">
-            Content
-        </p-panel>
-        <div class="forms-prospect-actuelle">
-            <p-panel header="POTENTIEL PROSPECT">
-                Content
+        <div class="centerilize">
+            <p-panel header="FORMALISATION DU DEVOIR DE CONSEIL" class="conseil">
+                <div class="form-line">
+                    <label class="require bolder">MOTIVATION D'ACHAT </label>
+                    <input type="text" pInputText class="p-inputtext-sm"/>
+                </div>
+                <div class="conseil-grid">
+                    <div class="conseil-col">
+                        <div class="box bolder">BESOINS</div>
+                        <div class="box labelline">HOSPITALISATION</div>
+                        <div class="box labelline">DENTAIRE</div>
+                        <div class="box labelline">OPTIQUE</div>
+                        <div class="box labelline">MEDECIN</div>
+                        <div class="box labelline">BUDGET</div>
+                    </div>
+                    <div class="conseil-col">
+                        <div class="box bolder ">ACTUELS</div>
+                        <div class="box ">
+                            <input type="text" pInputText class="p-inputtext-sm"/>
+                        </div>
+                        <div class="box ">
+                            <input type="text" pInputText class="p-inputtext-sm"/>
+                        </div>
+                        <div class="box ">
+                            <input type="text" pInputText class="p-inputtext-sm"/>
+                        </div>
+                        <div class="box ">
+                            <input type="text" pInputText class="p-inputtext-sm"/>
+                        </div>
+                        <div class="box ">
+                            <input type="text" pInputText class="p-inputtext-sm"/>
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="conseil-col">
+                        <div class="box bolder">SOUHAITES</div>
+                        <p-dropdown 
+                            [options]="wish" 
+                            placeholder="" 
+                            optionLabel="label"
+                            optionValue="value">
+                        </p-dropdown>
+                        <p-dropdown 
+                            [options]="wish" 
+                            placeholder="" 
+                            optionLabel="label"
+                            optionValue="value">
+                        </p-dropdown>
+                        <p-dropdown 
+                            [options]="wish" 
+                            placeholder="" 
+                            optionLabel="label"
+                            optionValue="value">
+                        </p-dropdown>
+                        <p-dropdown 
+                            [options]="wish" 
+                            placeholder="" 
+                            optionLabel="label"
+                            optionValue="value">
+                        </p-dropdown>
+                        <p-dropdown 
+                            [options]="wish" 
+                            placeholder="" 
+                            optionLabel="label"
+                            optionValue="value">
+                        </p-dropdown>
+                       
+                    </div>
+                    <div class="conseil-col">
+                        <div class="box bolder">DECOUVERTE</div>
+                        <div class="box">
+                            <textarea pInputTextarea class="p-textarea"></textarea>
+                        </div>
+                        <p-dropdown 
+                        [options]="wish" 
+                        placeholder="" 
+                        optionLabel="label"
+                        optionValue="value">
+                    </p-dropdown>
+                    </div>
+                </div>
+                <div class="conseil-grid">
+                    <div class="conseil-col">
+                        <div class="box bolder ">ACTUELS</div>
+                        <div>
+                            <label class="potentiel-label">CURE THERMALE</label>
+                            <input type="radio" id="ouiGAv" name="curethermale">
+                            <label>oui</label>
+                            <input type="radio" id="nonGAv" name="curethermale">
+                            <label>non</label>
+                        </div>
+                        <div>
+                            <label class="potentiel-label">APPAREIL AUDITIF</label>
+                            <input type="radio" id="ouiGAv" name="app-auditif">
+                            <label>oui</label>
+                            <input type="radio" id="nonGAv" name="app-auditif">
+                            <label>non</label>
+                            <input type="radio" id="nonGAv" name="app-auditif">
+                            <label>Non Communiqué</label>
+                        </div>
+                        <div>
+                            <label class="potentiel-label">MEDECINE DOUCE</label>
+                            <input type="radio" id="ouiGAv" name="medecineDouce">
+                            <label>oui</label>
+                            <input type="radio" id="nonGAv" name="medecineDouce">
+                            <label>non</label>
+                            <input type="radio" id="nonGAv" name="medecineDouce">
+                            <label>Non Communiqué</label>
+                        </div>
+                    </div>
+                    <div class="conseil-col">
+                        <div class="box bolder ">PROFIL</div>
+                        <div class="prospect-line">
+                            <label class="potentiel-label">BENEFICIAIRE ACS/CMU</label>
+                            <input type="radio" id="ouiGAv" name="benif">
+                            <label>oui</label>
+                            <input type="radio" id="nonGAv" name="benif">
+                            <label>non</label>
+                        </div>
+                        <div class="prospect-line">
+                            <label class="potentiel-label">PRISE EN CHARGE ALD</label>
+                            <input type="radio" id="ouiGAv" name="PEC">
+                            <label>oui</label>
+                            <input type="radio" id="nonGAv" name="PEC">
+                            <label>non</label>
+                        </div>
+                        <div class="prospect-line">
+                            <label class="potentiel-label">SOUS CURATELLE/TUTELLE</label>
+                            <input type="radio" id="ouiGAv" name="souscuratelle">
+                            <label>oui</label>
+                            <input type="radio" id="nonGAv" name="souscuratelle">
+                            <label>non</label>
+                        </div>
+                    </div>
+                </div>
             </p-panel>
-
-            <p-panel header="SITUATION ACTUELLE">
-                Content
+        </div>
+        
+        <div class="forms-prospect-actuelle">
+            <p-panel header="POTENTIEL PROSPECT" class="prospect">
+                <div class="prospect-line">
+                    <label class="potentiel-label">Déjà titulaire GAV </label>
+                    <div>
+                        <input type="radio" id="ouiGAv">
+                        <label>oui</label>
+                        <input type="radio" id="nonGAv">
+                        <label>non</label>
+                    </div>
+                </div>
+                <div class="prospect-line">
+                    <label  class="potentiel-label">Déjà titulaire d'obsèque </label>
+                    <div>
+                        <input type="radio" id="ouiGAv">
+                        <label>oui</label>
+                        <input type="radio" id="nonGAv">
+                        <label>non</label>
+                    </div>
+                </div>
+                <div class="prospect-line">
+                    <label class="potentiel-label">Déja titulaire Décès </label>
+                    <div>
+                        <input type="radio" id="ouiGAv">
+                        <label>oui</label>
+                        <input type="radio" id="nonGAv">
+                        <label>non</label>
+                    </div>
+                </div>
+                <div class="prospect-line">
+                    <label class="potentiel-label">Possède un animal de compagie </label>
+                    <div>
+                        <input type="radio" id="ouiGAv">
+                        <label>oui</label>
+                        <input type="radio" id="nonGAv">
+                        <label>non</label>
+                    </div>
+                </div>
+                <div class="prospect-line">
+                    <label class="potentiel-label" >Produit GAV proposé </label>
+                    <div>
+                        <input type="radio" id="ouiGAv">
+                        <label>oui</label>
+                        <input type="radio" id="nonGAv">
+                        <label>non</label>
+                    </div>
+                </div>
+            </p-panel>
+            <p-panel header="SITUATION ACTUELLE" class="actuelle">
+                <div class="prospect-line">
+                    <label class="potentiel-label">Déja titulaire d'une mutuelle</label>
+                    <div>
+                        <input type="radio" id="ouiGAv">
+                        <label>N.C</label>
+                        <input type="radio" id="ouiGAv">
+                        <label>oui</label>
+                        <input type="radio" id="nonGAv">
+                        <label>non</label>
+                    </div>
+                </div>
+                <div class="form-line">
+                    <label >Date de debut de contrat </label>
+                    <input type="text" pInputText class="p-inputtext-sm"/>
+                </div>
+                <div class="form-line" id="attention">
+                   ATTENTION : En cas de résiliation infra-annuelle, la date d'effet doit être au moins éloignée de 35 jours.
+                </div>
+                <div class="form-line">
+                    <label>Nom de la compagnie </label>
+                    <input type="text" pInputText class="p-inputtext-sm"/>
+                </div>
+                <div class="form-line">
+                    <label >Nom de la formule </label>
+                    <input type="text" pInputText class="p-inputtext-sm"/>
+                </div>
+                <div class="form-line">
+                    <label >Prime</label>
+                    <input type="text" pInputText class="p-inputtext-sm"/>
+                    <span>€/ans</span>
+                </div>
             </p-panel>
         </div>
     </div>
-
-    <button pButton type="button" label="QUALIFICATION" ></button>
-    <button pButton type="button" label="CREER LA FICHE" ></button>
-
-    
-
-   
-   
-
-    
-    
-
+    <div class="btngroup">
+        <button pButton type="button" label="QUALIFICATION" disabled></button>
+        <button pButton type="button" label="CREER LA FICHE" ></button>
+    </div>
 </div>

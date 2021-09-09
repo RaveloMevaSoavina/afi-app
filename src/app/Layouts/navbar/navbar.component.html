@@ -1,38 +1,10 @@
-<ul class="navbar">
-    <li class="navbar-menu navbar-menu--bordered">
-        <a href="" class="navbar-menu-link">ACCUEIL</a>
-    </li>
-    <li class="navbar-menu navbar-menu--bordered">
-        <a href="" class="navbar-menu-link">SAISIE</a>
-    </li>
-    <li class="navbar-menu navbar-menu--bordered">
-        <a href="" class="navbar-menu-link">GESTION DES LEADS</a>
-    </li>
-    <li class="navbar-menu navbar-menu--bordered">
-        <a href="" class="navbar-menu-link">PROSPECTION</a>
-    </li>
-    <li class="navbar-menu navbar-menu--bordered">
-        <a href="" class="navbar-menu-link">CLIENT CONTACTES</a>
-    </li>
-    <li class="navbar-menu navbar-menu--bordered">
-        <a href="" class="navbar-menu-link">TARIFICATION MODULR</a>
-    </li>
-    <li class="navbar-menu navbar-menu--bordered">
-        <a href="" class="navbar-menu-link">PRODUCTION INDIV</a>
-    </li>
-    <li class="navbar-menu navbar-menu--bordered">
-        <a href="" class="navbar-menu-link">PRODUCTION PÔLE</a>
-    </li>
-    <li class="navbar-menu navbar-menu--bordered">
-        <a href="" class="navbar-menu-link">TABLEAU DE BORD</a>
-    </li>
-    <li class="navbar-menu navbar-menu--bordered">
-        <a href="" class="navbar-menu-link">DOCUMENTATION</a>
-    </li>
-    <li class="navbar-menu ">
-        <a href="" class="navbar-menu-link">INFOS COMPANIE :</a>
-        <select id="infocompany">
-            <option [value]="company.code" *ngFor="let company of companies">{{ company.name }}</option>
-        </select>
-    </li>
-</ul>
+<p-menubar [model]="items" [autoDisplay]="true">
+    <p-dropdown 
+        [options]="companies" 
+        [(ngModel)]="selectCompany" 
+        placeholder="Infos companie" 
+        optionLabel="name"
+        optionValue="code"
+        [showClear]="true">
+    </p-dropdown>
+</p-menubar>

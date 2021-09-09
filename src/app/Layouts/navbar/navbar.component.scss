@@ -1,32 +1,158 @@
 :host ::ng-deep{
-    .navbar{
-        background-color: #00a4de;
-        display : flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        list-style-type: none;
-        #infocompany{
-            width : 200px;
-            margin-left : 20px;
-            border : none;
-            outline : none;
-        }
-
-        .navbar-menu{
-            background-color: #00a4de;
-            padding : 12px 30px;
-            .navbar-menu-link{
-                color : #FFF;
-                text-decoration: none;
-                font-weight: 400;
-                font-size: 0.75rem;
-            }
-            &:hover{
-                background-color: #0385b4;
-            }
-        }
+    .navbar-menu-link{
+        color : #FFF;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 0.8rem;
+        text-align: center;
+        height: 100%;
+        margin : 5px auto;
+        vertical-align: baseline;
+    }
+    .p-dropdown{
+        height: 40px;
+        width : 200px;
+        margin-left: 10px;
+        border : none;
+        outline : none;
+    }
         .navbar-menu--bordered{
             border-right: 1.5px solid #FFF ;
+        }
+
+    .p-menubar{
+        background-color: #0EAEE8;
+        padding: 0;
+        border: 0;
+        .p-menubar-root-list {
+            align-items: stretch;
+            @media screen and (max-width:960px){
+                background-color: #0EAEE8;
+            }
+            & > .p-menuitem{ 
+                border-right: 1px solid #ffffff;
+                display: flex;
+                @media screen and (min-width:961px){
+                    align-items: center;
+                }
+                @media screen and (max-width:960px){
+                    flex-direction: column;
+                }
+                &.p-menuitem-active{
+                    background-color: #0580ac;
+                    .p-menuitem-link{
+                        background-color: transparent;
+                        @media screen and (max-width:960px){
+                            width: 100%;
+                        }
+                        &:hover{
+                            background-color: transparent;
+                            .p-menuitem-text{
+                                color: #ffffff;
+                            }
+                        }
+                    }
+                    .p-submenu-icon{
+                        color: #ffffff;
+                    }
+                }
+                &:hover{
+                    background-color: #0580ac;
+                    .p-menuitem-text{
+                        color: #ffffff;
+                    }
+                }
+                & > .p-menuitem-link{
+                    height: 100%;
+                    font-size: 0.8rem;
+                    text-transform: uppercase ;
+                    text-align: center;
+                    display : block;
+
+                    &:hover{
+                        background-color: transparent;
+                        .p-menuitem-text{
+                            color: #ffffff;
+                        }
+                        .p-menuitem-icon{
+                            color: #ffffff;
+                        }
+                        .p-submenu-icon {
+                            color: #ffffff;
+                            
+                        }
+                    }
+                    .p-menuitem-icon{
+                        display : none;
+                    }
+                    .p-menuitem-text{
+                        color: #ffffff;
+                    }
+                    .p-submenu-icon{
+                        color: #ffffff;
+                        display :none;
+                    }
+                    & + .p-menubar-panel{
+                        background-color: #4f5252;
+                        .p-menubar-submenu-header{
+                            background-color: transparent;
+                        }
+                    }
+                }
+                &.p-menuitem-active{
+                    .p-submenu-icon {
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+        .infos-compagnie{
+            //padding: 0.75rem 1rem;
+            label{
+                color: #ffffff;
+            }
+        }
+        .p-menubar-button{
+            color: #ffffff;
+        }
+        .p-menubar-end{
+            .infos-compagnie{
+                width:100%;
+            }
+        }
+    }
+    p-menubarsub{
+        p-menubarsub{
+            @media screen and (max-width:960px){
+                width: 100%;
+                .p-submenu-list{
+                    width: 100%;
+                }
+            }
+            @media screen and (min-width:961px){
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+            .p-submenu-list{
+                background-color: #333;
+                z-index: 2;
+                li{
+                    color: #ffffff;
+                    font-size: 0.8rem;
+                    &:hover{
+                        color: #ffffff;
+                        background-color:#0EAEE8;
+                        a{
+                            color: #ffffff;
+                            
+                            &:hover{
+                                color: #ffffff;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

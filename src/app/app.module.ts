@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule , Title} from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms';
 
@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DropdownModule } from 'primeng/dropdown';
+import {MenubarModule} from 'primeng/menubar';
 
 
 import { AppComponent } from './app.component';
@@ -27,10 +28,13 @@ import { ContentLayoutComponent } from './Layouts/content-layout/content-layout.
     AppRoutingModule,
     FontAwesomeModule,
     DropdownModule,
-    FormsModule
+    FormsModule,
+    MenubarModule
     
   ],
-  providers: [],
+  providers: [
+    Title
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
